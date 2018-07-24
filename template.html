@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- Text -->
+	<span>Message: {{ msg }}</span>
+	<span v-once>This will never change: {{ msg }}</span>
+
+	<!-- Raw HTML -->
+	<p>Using mustaches: {{ rawHtml }}</p>
+	<p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+	<!-- Attributes -->
+	<div v-bind:id="dynamicId"></div>
+	<div v-bind:disabled="isButtonDisabled">Button</div>
+
+	<!-- Arguments -->
+	<a v-bind:href="url">url...</a>
+	<a v-on:click="doSomething">click...</a>
+
+	<!-- Modifiers -->
+	<form v-on:submit.prevent="onSubmit"></form>
+
+	<!-- Shorthands -->
+	<a v-bind:href="url">url...</a>
+	<a :href="url">...</a>
+
+	<a v-on:click="doSomething"></a>
+	<a @click="doSomething"></a>
+	
+</body>
+</html>
