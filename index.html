@@ -55,7 +55,13 @@
 		</ol>
 	</div>
 
-	<script src="index.js"></script>
+	<div id="instance-1">
+		<p>{{ foo }}</p>
+		<!-- this will no longer update 'foo' after freeze() -->
+		<button v-on:click="foo = 'baz'">Change it</button>
+	</div>
 
+	<script src="index.js"></script>
+	<script src="instance.js"></script>
 </body>
 </html>
