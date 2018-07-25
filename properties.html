@@ -20,6 +20,28 @@
 	  <p>{{ answer }}</p>
 	</div>
 
+	<!-- Conditional Rendering -->
+	<h2 v-if="ok">Yes</h2>
+	<h2 v-else>No</h2>
+
+	<div v-if="Math.random() > 0.5">
+		Now you see me
+	</div>
+	<div v-else>
+		Now you don't
+	</div>
+
+	<template v-if="loginType === 'username">
+		<label>Username</label>
+		<input placeholder="Enter your username">
+	</template>
+	<template v-else>
+		<label>Email</label>
+		<input placeholder="Enter your email address">
+	</template>
+
+	<h3 v-show="ok">Hello!</h3>
+
 	<script src="properties.js"></script>
 	<!-- Since there is already a rich ecosystem of ajax libraries    -->
 	<!-- and collections of general-purpose utility methods, Vue core -->
